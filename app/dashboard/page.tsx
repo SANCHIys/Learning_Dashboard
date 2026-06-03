@@ -12,7 +12,7 @@ export default async function DashboardPage() {
     .select()
   console.log(data, error)
     return (
-      <BentoGrid>
+      <BentoGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-6">
         {<section className="col-span-2">
           <HeroTile 
             Name="Sanchi Sharma"

@@ -14,8 +14,10 @@ export const itemVariants = {
   }
 export default function BentoGrid({
     children,
+    className,
   }: {
     children: React.ReactNode
+    className?: string
   }) 
   {
     const containerVariants = {
@@ -27,8 +29,12 @@ export default function BentoGrid({
         }
       }
     return(
-        <motion.div animate="visible" variants={containerVariants} initial='hidden' className="grid grid-cols-3 grid-rows-3 gap-4 p-6">
-            {children}
-        </motion.div>
+      <motion.div 
+      animate="visible" 
+      variants={containerVariants} 
+      initial='hidden'
+      className={className}>
+      {children}
+    </motion.div>
     )
 }
