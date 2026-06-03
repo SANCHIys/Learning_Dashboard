@@ -1,9 +1,5 @@
 import { createClient } from "@/lib/supabase/server";
-import { Courses } from "@/lib/types";
-import CourseCard from "@/components/CourseCard"
-import HeroTile from "@/components/HeroTile";
-import ActivityTile from "@/components/ActivityTile";
-import BentoGrid from "@/components/BentoGrid";
+import DashboardContent from "@/components/DashboardContent";
 
 export default async function DashboardPage() {
   const supabase = await createClient()
@@ -11,25 +7,5 @@ export default async function DashboardPage() {
     .from('Courses')
     .select()
   console.log(data, error)
-    return (
-      <BentoGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-6">
-        <section className="col-span-1 lg:col-span-2">
-          <HeroTile Name="Sanchi Sharma" streak={5} />
-        </section>
-        <section className="col-span-1">
-          <ActivityTile/>
-        </section>
-        <section className="col-span-1 md:col-span-2 lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-4">
-          {data?.map((course) => (
-            <section key={course.id}>
-              <CourseCard
-                title={course.title}
-                progress={course.progress}
-                icon_name={course.icon_name}
-              />
-            </section>
-          ))}
-        </section>
-      </BentoGrid>
-    )
-  }
+  return <DashboardContent data={data ?? []} />
+}

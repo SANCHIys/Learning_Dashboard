@@ -1,12 +1,12 @@
 "use client"
-
+import {useDashboard} from '@/lib/DashboardContext';
 import { useState } from 'react';
 import { BookCheck, House, Settings, UserPen, ChevronLeft, ChevronRight} from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Sidebar() {
     const [isCollapsed, setIsCollapsed] = useState(true);
-    const [activeItem, setActiveItem] = useState('');
+    const { activeItem, setActiveItem } = useDashboard()
     const navItems = [
         { id: 'home', label: 'Home', icon: House },
         { id: 'courses', label: 'Courses', icon: BookCheck},
