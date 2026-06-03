@@ -10,9 +10,10 @@
 ● Icons: Lucide React or Radix Icons.
 
 ## Architecture :
-- the page.tsx is the server component as it renders the data from the Supabase and displays the live data.
+- The page.tsx is the server component as it renders the data from the Supabase and displays the live data.
 - `Sidebar.tsx`, `CourseCard.tsx`, `HeroTile.tsx` and the `ActivityTile.tsx` are all Client components used for making the content and the animation more seamless.
-- for the Mobile layout we have have created a `BottomNav.tsx` which makes it Responsive. 
+- For the Mobile layout we have have created a `BottomNav.tsx` which makes it Responsive.
+- `DashboardContext.tsx` manages global navigation state, allowing the Sidebar to filter dashboard content without prop drilling. 
 
 ## Running Locally
 
