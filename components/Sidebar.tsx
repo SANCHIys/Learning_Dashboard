@@ -18,13 +18,13 @@ export default function Sidebar() {
     }
     return(
         <nav className="flex flex-col gap-4 w-26 transition-all duration-300">
-            <button className="p-2 rounded-lg hover:bg-gray-800 mb-4" onClick={toggleCollapsed}>{isCollapsed ? <ChevronRight size={20} /> : <ChevronLeft size={20} />}</button>
+            <button className="p-2 rounded-lg hover:bg-gradient-to-br from-violet-800 via-gray-800 via-gray-900 to-violet-900 mb-4" onClick={toggleCollapsed}>{isCollapsed ? <ChevronRight size={20} /> : <ChevronLeft size={20} />}</button>
             <ul>
             {navItems.map((item) => {        
                 const Icon = item.icon   
                 const isActive = activeItem === item.id    
                 return (                   
-                    <li className="flex items-center gap-3 p-2 rounded-lg cursor-pointer hover:bg--800" key={item.id} onClick={() => setActiveItem(activeItem === item.id ? '' : item.id)}>
+                    <li className="flex items-center gap-3 p-2 rounded-lg cursor-pointer hover:bg-gradient-to-br from-violet-800 via-gray-800 via-gray-900 to-violet-900" key={item.id} onClick={() => setActiveItem(activeItem === item.id ? '' : item.id)}>
                     {isActive && (
                         <motion.div
                             layoutId="active-pill"

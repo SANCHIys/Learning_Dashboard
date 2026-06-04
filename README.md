@@ -22,3 +22,11 @@
 3. Copy `.env.example` to `.env.local` and fill in your Supabase credentials
 4. Run `npm run dev`
 5. Open http://localhost:3000
+
+## Challenges:
+1. Setting up Turbopack and the Desktop folder permissions issue on Mac.
+2. Understanding Server vs Client components for the first time.
+3. Getting Framer Motion stagger animations to work correctly.
+4. Figuring out how to pass data from Server Components to Client Components using props.
+5. Setting up the DashboardContext to avoid prop drilling.
+6. Handling the Tailwind CSS which was not working Because the layout and page files didnt have access to the global.css.

@@ -9,7 +9,7 @@ interface HeroTileProps {
 export default function HeroTile({Name, streak}: HeroTileProps){
     const letters = Name.split("")
     return (
-        <article className="bg-gray-800 rounded-xl p-6 h-full border border-gray-700">
+        <article className="bg-gradient-to-br from-gray-800 via-gray-900 to-violet-900 rounded-xl p-4 border border-gray-700 h-full">
           <h1 className="text-4xl font-bold">
             Welcome Back!{" "}
             <motion.span>
